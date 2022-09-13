@@ -1,0 +1,52 @@
+<h2>{{title}}</h2>
+
+
+<p>Displaying the list using ngFor directive:</p>
+<ul>
+  <li *ngFor = "let book of Books">
+    <div>
+      {{ book.Name }} {{ book.Domain }} {{ book.Price }}
+    </div>
+  </li>
+</ul>
+
+<p>Displaying the list along with the index number</p>
+<ul>
+  <li *ngFor = "let book of Books; index as i">
+    <div>
+      {{ i }} {{ book.Name }} {{ book.Domain }} {{ book.Price }}
+    </div>
+  </li>
+</ul>
+
+<p>Displaying the first record</p>
+<ul>
+  <li *ngFor = "let book of Books; index as i; first as f">
+    <div *ngIf = "f" style="font-weight:bolder; color: rgb(112, 73, 218);">This is the first record</div>
+    <div>
+      {{ i }} {{ book.Name }} {{ book.Domain }} {{ book.Price }}
+    </div>
+  </li>
+</ul>
+
+<p>Displaying the last record</p>
+<ul>
+  <li *ngFor = "let book of Books; index as i; last as l">
+    <div *ngIf = "l" style="font-weight:bolder; color: rgb(231, 83, 24);">This is the last record</div>
+    <div>
+      {{ i }} {{ book.Name }} {{ book.Domain }} {{ book.Price }}
+    </div>
+  </li>
+</ul>
+
+<p>Displaying the data with Even and Odd</p>
+<ul>
+  <li *ngFor = "let book of Books; index as i; even as e; odd as o">
+    <div *ngIf = "e" style="background-color:gold">
+      {{ i }} {{ book.Name }} {{ book.Domain }} {{ book.Price }}
+    </div>
+    <div *ngIf = "o" style="background-color:lightcoral">
+      {{ i }} {{ book.Name }} {{ book.Domain }} {{ book.Price }}
+    </div>
+  </li>
+</ul>

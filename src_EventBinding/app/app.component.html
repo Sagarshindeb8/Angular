@@ -1,0 +1,26 @@
+<h1>Event Binding</h1>
+
+<button (click)="sayHello()">SayHello</button>
+
+<button (click)="ClickCount()">ClickCount</button>
+<p>You have clicked {{Count}}</p>
+
+<div (mouseover)="MouseHover()">When mouse hover.</div>
+
+<h2>$event payload</h2>
+<input (input)="handleInput($event)">
+<p>You have entered: {{value}}</p>
+ 
+<button value="Laptop" (click) = "OnAdd($event)">Laptop</button>
+<button value="Camera" (click) = "OnAdd($event)">Camera</button>
+<button value="Mobile" (click) = "OnAdd($event)">Mobile</button>
+<p>{{msg}}</p>
+
+<h2>Template Reference Variable</h2>
+<input #el (input)="handleInput1(el)">
+<p>You have entered: {{val}}</p>
+
+<input #myref type="text" value="ANG" name="Angular">
+<button (click)="GetInfoF(myref)">GetInfo</button>
+<p>{{MyCourse}}</p>
+

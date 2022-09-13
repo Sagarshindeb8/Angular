@@ -1,0 +1,8 @@
+<p>Inside Parent Component</p>
+
+<button (click)="ToggleChild()">Toggle Child Component</button>
+
+<br>
+
+<input type="text" [(ngModel)]="Message">
+<app-child *ngIf="isChild" [Message]="Message"></app-child>

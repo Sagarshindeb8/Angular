@@ -1,0 +1,42 @@
+<h1>{{title}}</h1>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+<!--ngIf with logical operators-->
+
+<!--Will display the message only when the If condition is true, ie, when UserLogInStatus is true.-->
+<h2 *ngIf="AdminLogInStatus">Admin logged In</h2>
+
+<!--ngIf using !-->
+<!--Will display the message when the If conditions is true as NOT (!) is used-->
+<h2 *ngIf="!UserLogInStatus">User logged In</h2>
+
+<!--ngIf with OR condition-->
+<!--Will display the message when either of the If conditions is true as OR (||) is used-->
+<h2 *ngIf="Person1LogInStatus || Person2LogInStatus">Person1 and Person2 logged In</h2>
+
+<!--ngIf with OR condition-->
+<!--Will display the message when both the conditions are true as AND (&&) is used-->
+<h2 *ngIf="Employee1LogInStatus && Employee2LogInStatus">Employee1 and Employee2 logged In</h2>
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+<!--ngIf else-->
+
+<!--Will display the message only when the If condition is true, else it will display the else block-->
+<br>
+<h2 *ngIf="Admin1LogInStatus; else error_msg1">Admin1 logged In</h2>
+<ng-template #error_msg1>Admin1 not added</ng-template>
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+<!--ngIf then else-->
+
+<!--When the If condition is true, it will display the then block, else it will display the else block-->
+<br>
+<h2 *ngIf="Admin2LogInStatus; then Updated_msg; else error_msg2"></h2>
+<ng-template #Updated_msg>Admin2 logged In</ng-template>
+<br>
+<ng-template #error_msg2>Admin2 not added</ng-template>
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////

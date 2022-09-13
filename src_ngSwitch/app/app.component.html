@@ -1,0 +1,57 @@
+<h2>{{title}}</h2>
+<p>ngSwitch using string data</p>
+<div>
+Input Branch: <input type='text' [(ngModel)]="Branch" />
+<div [ngSwitch]="Branch">
+  <div *ngSwitchCase="'Mechanical'">Branch selected: Mechanical</div>
+  <div *ngSwitchCase="'CS'">Branch selected: Computer Science</div>  
+  <div *ngSwitchCase="'Civil'">Branch selected: Civil</div>  
+  <div *ngSwitchCase="'Electrical'">Branch selected: Electrical</div>
+  <div *ngSwitchDefault>Please select appropriate Branch</div>  
+</div>
+</div>
+
+<br>
+
+<p>ngSwitch using numeric data</p>
+Input Income: <input type="text" [(ngModel)]="IncomeTax" />
+<div [ngSwitch]="IncomeTax">
+  <div *ngSwitchCase=250000>No Income Tax</div>
+  <!--Any data in between will be displayed as it is-->
+  <!--<div>Hello this is middle data random</div>-->
+  <div *ngSwitchCase=300000>5% Income Tax</div>
+  <div *ngSwitchCase=600000>10% Income Tax</div>
+  <div *ngSwitchCase=1000000>15% Income Tax</div>
+  <div *ngSwitchDefault>30% Income Tax</div>  
+</div>
+
+<br>
+<hr>
+<br>
+
+<h2>ngStyle Directive</h2>
+<div [ngStyle]="{'background-color':'aqua'}">This is ngStyle div</div>
+<br>
+
+<p>ngStyle using dynamic variable implementation</p>
+<div [ngStyle]="{'background-color': MyColor}">This is ngStyle div using dynamic variable implementation</div>
+<br>
+
+<p>ngStyle using conditional operators implementation</p>
+<div [ngStyle]="{'color': TextColor === 'orange'? 'orange' : 'red'}">This is conditional ngStyle div</div>
+
+<br>
+<hr>
+<br>
+
+<h2>ngClass Directive</h2>
+<div [ngClass]="'c1'">This is ngClass div</div>
+<p>ngClass Passing multiple classes</p>
+<div [ngClass]="'c1 c2'">This is ngClass div with multiple classes</div>
+<p>ngClass Passing dynamic classes</p>
+<div [ngClass]="StyleClass">This is ngClass div with dynamic class</div>
+<p>ngClass using conditional classes</p>
+<div [ngClass]="ConditionStyleClass === 'c4'? 'c4' : 'c5'">This is ngClass div with conditional class</div>
+<p>ngClass Passing objects</p>
+<div [ngClass]="{c2:true, c3:true}">This is ngClass div with objects class</div>
+<br>

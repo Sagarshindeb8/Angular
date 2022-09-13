@@ -1,0 +1,62 @@
+<h1>Property Binding examples</h1>
+
+<!--String-->
+<h2 [innerHTML] = "title"> is the title of page</h2>
+<p>Using [innerHTML] = "name1":</p>
+<h2 [innerHTML] = "name1">Data</h2>
+<p>Using bind-innerHTML = "name2"</p>
+<h2 bind-innerHTML = "name2">Data</h2>
+<p>[innerHTML] = "name1 + name2" concat</p>
+<h2 [innerHTML] = "name1 + name2">Data</h2>
+
+
+<!--Number-->
+<p>Value of no1:</p>
+<h2 [innerHTML] = "no1"></h2>
+<p>Value of no2:</p>
+<h2 [innerHTML] = "no2"></h2>
+<p>Value of no1+no2:</p>
+<h2 [innerHTML] = "ans"></h2>
+<h2 [innerHTML] = "no1 + no2"></h2>
+
+<!--Image-->
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNe2tqaxR2ymiqjjk2PA0b10NO9N8650Cs5Q&usqp=CAU">
+<img [src] = "ImgLink">
+<br>
+
+<!--Toggle a button-->
+<button [disabled]="bool">Button</button>
+<button type="button" [disabled] = "isUnchanged">disabled Button</button>
+
+<!--Class Binding-->
+<h3 class="classColor">Red Text by class binding</h3>
+<h3 class="classStyle">Italic Text by class binding</h3>
+<h3 class="classSize">30px Text size by class binding</h3>
+<h3 class="classColor classStyle classSize">Combination of Text color, style and size by class binding</h3>
+<h3 [class] = "variable1">This text style is through ts file</h3>
+<h3 class="classColor" [class.classStyle]="booleanVal">Dynamic Text</h3>
+<h3 [ngClass]="ObjVal">Multiple classes</h3>
+<h3 [ngClass]="getClass()">Getting class through Function</h3>
+
+<!--Style Binding-->
+<h3 [style.color]="'blue'">Blue Text by style binding</h3>
+<h3 [style.border]="'2px solid green'">Border by style binding</h3>
+<h3 [style.background-color]="'aqua'">Blue Text by style binding</h3>
+<h3 [style.color]="getColor()">Getting style through Function</h3>
+<h3 [style.color]="status == 'error'?'red':'green'">Red is error, green is no error-Text by style binding</h3>
+<h3 [style.fontSize.px]="'35'">Font size by style binding</h3>
+<h3 [style.color]="'brown'" [style.fontSize.px]="'20'" [style.background-color]="'lightgreen'">Blue Text by style binding</h3>
+<h3 [ngStyle]="{'color':'lightblue'}">Using ngStyle</h3>
+<h3 [ngStyle]="{'fontSize':'15px' , 'background-color':'pink'}">Using ngStyle</h3>
+
+
+<input [placeholder] = "PlaceValue">
+<br>
+
+
+
+<!--Link-->
+<a href="https://www.w3schools.com/html/html_attributes.asp">HTML Tutorial</a>
+<br>
+<a [href] = "TutorialLink">Click for Tutorial</a>
+

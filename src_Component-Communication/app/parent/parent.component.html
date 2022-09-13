@@ -1,0 +1,9 @@
+<p>Inside parent</p>
+
+<app-child [parentMessage] = "parentData" [p1] = "no" (eobj)="message=$event"></app-child>
+<h2>Message from child component: {{message}}</h2>
+<br>
+
+<button (click)="SendData()">Click to send mesg to App comp</button>
+
+<br>

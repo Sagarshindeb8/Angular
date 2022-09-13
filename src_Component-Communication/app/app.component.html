@@ -1,0 +1,45 @@
+
+
+<p>Interpolation</p>
+{{title}}
+<br>
+<br>
+<p>ngModel</p>
+<input type="text" [(ngModel)] = "name">
+{{name}}
+<br>
+<br>
+
+<p>ngModel split</p>
+<input type="text" [ngModel] = "username" (ngModelChange)="Demo($event)">
+{{username}}
+<br>
+<br>
+<p>ngModel getters and setters</p>
+<input type="text" [(ngModel)] = "EndUser">
+{{EndUser}}
+<br>
+<br>
+
+
+<br>
+<br>
+<img [src]="imgUrl">
+<br>
+<br>
+
+<button style="color: red;padding: 10px;font-weight: bold;" [disabled]="val" (click)="clicked()">Click</button>
+Click count: {{count}}
+
+<!--Template reference variables for accessing child properties and methos directly from paret comp-->
+
+<My-parent (pobj) = "msg=$event" #child></My-parent>
+
+<br>
+{{child.name}}
+<br>
+<br>
+<button (click)="child.template()">Click to Access Child Method</button>
+<br>
+<h2>Message from parent component: {{msg}}</h2>
+<br>
